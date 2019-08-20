@@ -1,0 +1,9 @@
+channel_sources:
+  - nsls2forge,defaults
+channel_targets:
+  - nsls2forge main
+MACOSX_DEPLOYMENT_TARGET:
+  skip: true  # [win]
+  - "10.12"
+macos_min_version:
+  - "10.12"
