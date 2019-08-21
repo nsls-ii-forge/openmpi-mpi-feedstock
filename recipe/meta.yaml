@@ -1,4 +1,5 @@
 {% set version = "4.0.1" %}
+{% set sha256 = "cce7b6d20522849301727f81282201d609553103ac0b09162cf28d102efb9709" %}
 {% set major = version.rpartition('.')[0] %}
 
 package:
@@ -9,11 +10,11 @@ package:
 source:
   fn: openmpi-{{ version }}.tar.bz2
   url: https://www.open-mpi.org/software/ompi/v{{ major }}/downloads/openmpi-{{ version }}.tar.bz2
-  sha256: cce7b6d20522849301727f81282201d609553103ac0b09162cf28d102efb9709
+  sha256: {{ sha256 }}
 
 build:
-  number: 2
-  skip: True  # [win]
+  number: 0
+  skip: True  # [win or osx]
 
 outputs:
   - name: openmpi
@@ -92,23 +93,23 @@ outputs:
         - tests/helloworld.f90
 
 about:
-    home: https://www.open-mpi.org/
-    license: BSD 3-Clause
-    license_family: BSD
-    license_file: LICENSE
-    summary: 'An open source Message Passing Interface implementation.'
-    description: |
-        The Open MPI Project is an open source Message Passing Interface
-        implementation that is developed and maintained by a consortium of academic,
-        research, and industry partners.
-    doc_url: https://www.open-mpi.org/doc/
-    dev_url: https://github.com/open-mpi/ompi
+  home: https://www.open-mpi.org/
+  license: BSD 3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: 'An open source Message Passing Interface implementation.'
+  description: |
+      The Open MPI Project is an open source Message Passing Interface
+      implementation that is developed and maintained by a consortium of academic,
+      research, and industry partners.
+  doc_url: https://www.open-mpi.org/doc/
+  dev_url: https://github.com/open-mpi/ompi
 
 extra:
-    recipe-maintainers:
-        - astrofrog-conda-forge
-        - bekozi
-        - dalcinl
-        - minrk
-        - msarahan
-        - ocefpaf
+  recipe-maintainers:
+    - astrofrog-conda-forge
+    - bekozi
+    - dalcinl
+    - minrk
+    - msarahan
+    - ocefpaf

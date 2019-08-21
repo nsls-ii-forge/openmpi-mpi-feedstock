@@ -3,7 +3,6 @@ channel_sources:
 channel_targets:
   - nsls2forge main
 MACOSX_DEPLOYMENT_TARGET:
-  skip: true  # [win]
   - "10.12"
 macos_min_version:
   - "10.12"
