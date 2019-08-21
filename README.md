@@ -38,24 +38,16 @@ Current build status
                   <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/openmpi-mpi-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
                 </a>
               </td>
-            </tr><tr>
-              <td>osx_fortran_compiler_version4</td>
-              <td>
-                <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=56&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/openmpi-mpi-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_fortran_compiler_version7</td>
-              <td>
-                <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=56&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/openmpi-mpi-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7" alt="variant">
-                </a>
-              </td>
             </tr>
           </tbody>
         </table>
       </details>
+    </td>
+  </tr>
+  <tr>
+    <td>OSX</td>
+    <td>
+      <img src="https://img.shields.io/badge/OSX-disabled-lightgrey.svg" alt="OSX disabled">
     </td>
   </tr>
   <tr>
