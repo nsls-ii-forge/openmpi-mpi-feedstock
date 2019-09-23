@@ -8,7 +8,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: openmpi-{{ version }}.tar.bz2
   url: https://www.open-mpi.org/software/ompi/v{{ major }}/downloads/openmpi-{{ version }}.tar.bz2
   sha256: {{ sha256 }}
 
@@ -104,12 +103,3 @@ about:
       research, and industry partners.
   doc_url: https://www.open-mpi.org/doc/
   dev_url: https://github.com/open-mpi/ompi
-
-extra:
-  recipe-maintainers:
-    - astrofrog-conda-forge
-    - bekozi
-    - dalcinl
-    - minrk
-    - msarahan
-    - ocefpaf

@@ -56,7 +56,12 @@ Current build status
       <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
     </td>
   </tr>
-![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
+  <tr>
+    <td>Linux_ppc64le</td>
+    <td>
+      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
+    </td>
+  </tr>
 </table>
 
 Current release info
@@ -118,10 +123,4 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@astrofrog-conda-forge](https://github.com/astrofrog-conda-forge/)
-* [@bekozi](https://github.com/bekozi/)
-* [@dalcinl](https://github.com/dalcinl/)
-* [@minrk](https://github.com/minrk/)
-* [@msarahan](https://github.com/msarahan/)
-* [@ocefpaf](https://github.com/ocefpaf/)
 
