@@ -48,18 +48,8 @@ if [ ! -z "$build_with_cuda" ]; then
     echo "opal_warn_on_missing_libcuda = 0" >> $PREFIX/etc/openmpi-mca-params.conf
     echo "setting the mca opal_cuda_support to 0..."
     echo "opal_cuda_support = 0" >> $PREFIX/etc/openmpi-mca-params.conf
-    
+
     POST_LINK=$PREFIX/bin/.openmpi-post-link.sh
     cp $RECIPE_DIR/post-link.sh $POST_LINK
     chmod +x $POST_LINK
-fi
-
-if [ $(uname) == Darwin ]; then
-    # workaround for open-mpi/ompi#7516
-    echo "setting the mca gds to hash..."
-    echo "gds = hash" >> $PREFIX/etc/pmix-mca-params.conf
-
-    # workaround for open-mpi/ompi#5798
-    echo "setting the mca btl_vader_backing_directory to /tmp..."
-    echo "btl_vader_backing_directory = /tmp" >> $PREFIX/etc/openmpi-mca-params.conf
 fi
