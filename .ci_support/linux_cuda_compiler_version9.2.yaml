@@ -1,0 +1,19 @@
+c_compiler:
+- gcc
+channel_sources:
+- nsls2forge,defaults
+channel_targets:
+- nsls2forge main
+cuda_compiler:
+- nvcc
+cuda_compiler_version:
+- '9.2'
+cxx_compiler:
+- gxx
+docker_image:
+- condaforge/linux-anvil-cuda:9.2
+fortran_compiler:
+- gfortran
+zip_keys:
+- - cuda_compiler_version
+  - docker_image
