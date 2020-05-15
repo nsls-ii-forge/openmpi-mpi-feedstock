@@ -3,7 +3,7 @@ About openmpi-mpi
 
 Home: https://www.open-mpi.org/
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
@@ -32,10 +32,10 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux</td>
+              <td>linux_cuda_compiler_version9.2</td>
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=56&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/openmpi-mpi-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
+                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/openmpi-mpi-feedstock?branchName=master&jobName=linux&configuration=linux_cuda_compiler_version9.2" alt="variant">
                 </a>
               </td>
             </tr>

@@ -1,5 +1,5 @@
-{% set version = "4.0.1" %}
-{% set sha256 = "cce7b6d20522849301727f81282201d609553103ac0b09162cf28d102efb9709" %}
+{% set version = "4.0.3" %}
+{% set sha256 = "1402feced8c3847b3ab8252165b90f7d1fa28c23b6b2ca4632b6e4971267fd03" %}
 {% set major = version.rpartition('.')[0] %}
 
 package:
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [win or osx]
+  skip: true  # [win or osx or (linux64 and cuda_compiler_version != '9.2')]
 
 outputs:
   - name: openmpi
@@ -21,16 +21,23 @@ outputs:
     build:
       run_exports:
         - {{ pin_subpackage('openmpi', min_pin='x.x.x', max_pin='x.x') }}
+      ignore_run_exports:
+        - cudatoolkit
     requirements:
       build:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - {{ compiler('fortran') }}
+        - {{ compiler('cuda') }}  # [linux64]
         - make  # [unix]
         - perl 5.26.2
-      host: []
+      host:
+        - zlib
       run:
+        - zlib
         - mpi 1.0 openmpi
+      run_constrained:
+        - cudatoolkit >={{ cuda_compiler_version }}  # [linux64]
     test:
       script: run_test.sh
       files:
@@ -93,13 +100,13 @@ outputs:
 
 about:
   home: https://www.open-mpi.org/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'An open source Message Passing Interface implementation.'
+  summary: An open source Message Passing Interface implementation.
   description: |
-      The Open MPI Project is an open source Message Passing Interface
-      implementation that is developed and maintained by a consortium of academic,
-      research, and industry partners.
+    The Open MPI Project is an open source Message Passing Interface
+    implementation that is developed and maintained by a consortium of academic,
+    research, and industry partners.
   doc_url: https://www.open-mpi.org/doc/
   dev_url: https://github.com/open-mpi/ompi
