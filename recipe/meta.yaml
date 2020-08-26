@@ -1,5 +1,5 @@
-{% set version = "4.0.3" %}
-{% set sha256 = "1402feced8c3847b3ab8252165b90f7d1fa28c23b6b2ca4632b6e4971267fd03" %}
+{% set version = "4.0.5" %}
+{% set sha256 = "c58f3863b61d944231077f344fe6b4b8fbb83f3d1bc93ab74640bf3e5acac009" %}
 {% set major = version.rpartition('.')[0] %}
 
 package:
@@ -50,7 +50,7 @@ outputs:
         - echo 'ok'  # [not osx]
         # make CONDA_BUILD_SYSROOT a 'used variable'
         # so that conda-build knows to pass it to the test env
-        - echo "{{CONDA_BUILD_SYSROOT}}"  # [osx]
+        - echo "{{ CONDA_BUILD_SYSROOT }}"  # [osx]
     requirements:
       run:
         - {{ pin_subpackage('openmpi', exact=True) }}
@@ -68,7 +68,7 @@ outputs:
         - echo 'ok'  # [not osx]
         # make CONDA_BUILD_SYSROOT a 'used variable'
         # so that conda-build knows to pass it to the test env
-        - echo "{{CONDA_BUILD_SYSROOT}}"  # [osx]
+        - echo "{{ CONDA_BUILD_SYSROOT }}"  # [osx]
     requirements:
       run:
         - {{ pin_subpackage('openmpi', exact=True) }}
@@ -86,7 +86,7 @@ outputs:
         - echo 'ok'  # [not osx]
         # make CONDA_BUILD_SYSROOT a 'used variable'
         # so that conda-build knows to pass it to the test env
-        - echo "{{CONDA_BUILD_SYSROOT}}"  # [osx]
+        - echo "{{ CONDA_BUILD_SYSROOT }}"  # [osx]
     requirements:
       run:
         - {{ pin_subpackage('openmpi', exact=True) }}
